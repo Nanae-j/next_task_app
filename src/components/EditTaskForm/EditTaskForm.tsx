@@ -4,6 +4,7 @@ import { TaskDocument } from '@/models/task';
 import { useState } from 'react';
 import { useFormState, useFormStatus } from 'react-dom';
 import { updateTask } from '@/actions/task';
+import { FormState } from '@/actions/task';
 
 interface EditTaskFormProps {
   task: TaskDocument;
