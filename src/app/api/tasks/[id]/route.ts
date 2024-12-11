@@ -4,11 +4,12 @@ import { TaskModel } from '@/models/task';
 
 export const GET = async (
   _: NextRequest,
-  { params }: { params: { id: string } },
+  { params }: { params: Promise<{ id: string }> },
 ) => {
   try {
     await connectDb();
-    const task = await TaskModel.findById(params.id);
+    const resolvedParams = await params; // paramsをawaitで解決
+    const task = await TaskModel.findById(resolvedParams.id);
 
     if (!task) {
       return NextResponse.json(

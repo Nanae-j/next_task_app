@@ -11,15 +11,15 @@
   "dependencies": {
     "@types/react-icons": "^3.0.0",
     "mongoose": "^8.8.4",
-    "next": "14.2.20",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-icon": "^1.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/node": "^22.10.1",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.20",
     "postcss": "^8",
