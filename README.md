@@ -20,8 +20,8 @@
   </a>
   
   <!-- ミドルウェア -->
-  <a href="https://microcms.io/">
-  <img src="https://img.shields.io/badge/-microCMS-563bff.svg?logo=microcms&style=for-the-badge">
+  <a href="https://www.mongodb.com/ja-jp">
+  <img src="https://img.shields.io/badge/-Mongodb-47A2.svg?logo=mongodb&style=for-the-badge">
   </a>
 
 </div>
@@ -29,7 +29,7 @@
 #### 使用ライブラリ
 <div>
   <!-- 使用ライブラリ -->
-  <p></p>
+  <p><a href=""></a></p>
 </div>
 
 
@@ -59,7 +59,7 @@
 | 言語・フレームワーク  | バージョン |
 | --------------------- | ---------- |
 | Node.js               | 18.20.4    |
-| Next.js               | 14.2.0    |
+| Next.js               | 14.2.20    |
 | React                 | 18.3.1     |
 
 その他のパッケージのバージョンは package.json を参照してください
@@ -70,52 +70,12 @@
 ## ディレクトリ構成
 
 ```
-.
-├── .env
-├── .gitignore
-├── README.md
-├── package-lock.json
-├── package.json
-├── src
-│   ├── App.css
-│   ├── App.tsx
-│   ├── Calendar.css
-│   ├── components
-│   │   ├── Calendar.tsx
-│   │   ├── DailySummary.tsx
-│   │   ├── MonthlySummary.tsx
-│   │   ├── TransactionForm.tsx
-│   │   ├── TransactionMenu.tsx
-│   │   ├── common
-│   │   └── layout
-│   ├── firebase.ts
-│   ├── index.css
-│   ├── index.tsx
-│   ├── pages
-│   │   ├── Home.tsx
-│   │   ├── NoMatch.tsx
-│   │   └── Report.tsx
-│   ├── theme
-│   │   └── theme.ts
-│   ├── types
-│   │   └── index.ts
-│   └── utils
-│       ├── financeCalculations.ts
-│       └── formatting.ts
-└── tsconfig.json
+
 ```
 
  補足
 ```
-├── components
-│   ├── common - 複数のファイルで呼び出す汎用コンポーネント
-│   └── layout - アプリ全体のレイアウト
-├── pages
-├── theme - MUIテーマの拡張
-├── types - アプリ全体で使用する型定義
-└── utils - アプリ全体で使用する汎用関数
-               ├── financeCalculations.ts - 収支計算に関する関数
-               └── formatting.ts - 日付や金額のデータをフォーマットする関数
+
 ```
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
