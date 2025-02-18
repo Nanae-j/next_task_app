@@ -1,8 +1,9 @@
 'use client';
 
+import { FormState, updateTask } from '@/actions/task';
 import { TaskDocument } from '@/models/task';
 import { useState } from 'react';
-
+import { useFormState, useFormStatus } from 'react-dom';
 interface editTaskFormProps {
   task: TaskDocument;
 }
@@ -13,9 +14,27 @@ const EditTaskForm: React.FC<editTaskFormProps> = ({ task }) => {
   const [dueDate, setDueDate] = useState(task.dueDate);
   const [isCompleted, setIsCompleted] = useState(task.isCompleted);
 
+  const updateTaskWithId = updateTask.bind(null, task._id);
+  const initialSate: FormState = { error: '' };
+  const [state, formAction] = useFormState(updateTaskWithId, initialSate);
+
+  const SubmitButton = () => {
+    const { pending } = useFormStatus();
+
+    return (
+      <button
+        type="submit"
+        disabled={pending}
+        className="mt-8 py-2 w-full rounded-md text-white bg-amber-600 hover:bg-amber-400 text-sm font-semibold shadow-sm leading-6 tracking-widest disabled:bg-gray-400"
+      >
+        編集
+      </button>
+    );
+  };
+
   return (
     <div className="mt-10 mx-auto w-full max-w-sm">
-      <form action="">
+      <form action={formAction}>
         <div>
           <label htmlFor="title" className="block text-sm font-medium">
             タイトル
@@ -73,12 +92,10 @@ const EditTaskForm: React.FC<editTaskFormProps> = ({ task }) => {
             タスクを完了にする
           </label>
         </div>
-        <button
-          type="submit"
-          className="mt-8 py-2 w-full rounded-md text-white bg-amber-600 hover:bg-amber-400 text-sm font-semibold shadow-sm leading-6 tracking-widest"
-        >
-          編集
-        </button>
+        <SubmitButton />
+        {state.error !== '' && (
+          <p className="mt-2 text-red-500 text-sm">{state.error}</p>
+        )}
       </form>
     </div>
   );
