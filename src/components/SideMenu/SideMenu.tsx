@@ -1,7 +1,8 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import NavList from './NavList/NavList';
-import Lottie from 'lottie-react';
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 import TitleAnime from '../../../public/TitleAnime.json';
 
 const SideMenu = () => {
