@@ -71,12 +71,59 @@
 ## ディレクトリ構成
 
 ```
-
+.
+├── .env.local
+├── .eslintrc.json
+├── .gitignore
+├── .nvmrc
+├── .vscode
+├── README.md
+├── next-env.d.ts
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── /src
+└── tsconfig.json
 ```
 
- 補足
+/src
 ```
-
+.
+├── actions (serverActions用のディレクトリ)
+│   └── task.ts
+├── app
+│   ├── (main) (ページ構成)
+│   │   ├── completed
+│   │   ├── edit
+│   │   ├── expired
+│   │   ├── layout.tsx
+│   │   ├── loading.tsx
+│   │   ├── new
+│   │   └── page.tsx
+│   ├── api (ルートハンドラー用のディレクトリ)
+│   │   └── tasks
+│   ├── error.tsx
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── not-found.tsx
+├── components
+│   ├── EditTaskForm
+│   │   └── EditTaskForm.tsx
+│   ├── NewTaskForm
+│   │   └── NewsTaskForm.tsx
+│   ├── SideMenu
+│   │   ├── NavList
+│   │   └── SideMenu.tsx
+│   └── TaskCard
+│       ├── TaskCard.tsx
+│       ├── TaskDeleteButton
+│       └── TaskEditButton
+├── models 
+│   └── task.ts (Mongo DBのモデル作成)
+└── utils
+    └── database.ts (DB接続関数)
 ```
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
@@ -97,7 +144,8 @@ In the project directory, you can run:
 
 | 変数名                 | 役割                                   
 | ----------------------| ----------------------------------------------------------------
-| FIREBASE_API_KEY      | household-typescriptプロジェクトのAPIキー(収支コレクションの取得に使用)
+| DB_URI                | 
+| API_URL               |
 
 ```
 
