@@ -29,7 +29,10 @@
 #### 使用ライブラリ
 <div>
   <!-- 使用ライブラリ -->
-  <p><a href="https://tailwindcss.com/">Tailwind CSS(v4)</a></p>
+  <p><a href="https://lottiefiles.com/jp/" target="_blank">Lottie</a></p>
+  <p><a href="https://mongoosejs.com/" target="_blank">mongoose</a></p>
+  <p><a href="https://react-icons.github.io/react-icons/" target="_blank">react icons</a></p>
+  <p><a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a></p>
 </div>
 
 
@@ -77,20 +80,44 @@
 ├── .gitignore
 ├── .nvmrc
 ├── .vscode
+│   └── settings.json
 ├── README.md
 ├── next-env.d.ts
 ├── next.config.mjs
 ├── package-lock.json
 ├── package.json
 ├── postcss.config.mjs
-├── /src
+├── src
+│   ├── actions
+│   │   └── task.ts
+│   ├── app
+│   │   ├── (main)
+│   │   ├── api
+│   │   ├── error.tsx
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── not-found.tsx
+│   │   ├── opengraph-image.alt.txt
+│   │   ├── opengraph-image.jpg
+│   │   ├── twitter-image.alt.txt
+│   │   └── twitter-image.jpg
+│   ├── components
+│   │   ├── EditTaskForm
+│   │   ├── NewTaskForm
+│   │   ├── SideMenu
+│   │   └── TaskCard
+│   ├── models
+│   │   └── task.ts
+│   └── utils
+│       └── database.ts
 └── tsconfig.json
 ```
 
 /src
 ```
 .
-├── actions (serverActions用のディレクトリ)
+├── actions (serverActions用のディレクトリ タスクの作成はこちらを使用)
 │   └── task.ts
 ├── app
 │   ├── (main) (ページ構成)
@@ -101,7 +128,7 @@
 │   │   ├── loading.tsx
 │   │   ├── new
 │   │   └── page.tsx
-│   ├── api (ルートハンドラー用のディレクトリ)
+│   ├── api (ルートハンドラー用のディレクトリ タスクの取得表示はこちらを使用)
 │   │   └── tasks
 │   ├── error.tsx
 │   ├── favicon.ico
@@ -135,7 +162,7 @@ In the project directory, you can run:
 
 #### `npm install`
 
-### .env ファイルを作成 (.env-sampleあり)
+### .env ファイルを作成
 
 以下の環境変数の一覧を元に作成
 
