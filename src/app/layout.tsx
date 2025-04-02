@@ -2,8 +2,17 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Next タスク管理アプリ',
-  description: 'Next,mongoDBを使用したアプリ学習',
+  title: 'Nextタスク管理アプリ',
+  description: 'Next.jsとMongoDBを使用したタスク管理アプリの学習です。',
+  openGraph: {
+    title: 'Nextタスク管理アプリ',
+    description: 'Next.jsとMongoDBを使用したタスク管理アプリの学習です。',
+  },
+  twitter: {
+    title: 'Nextタスク管理アプリ',
+    description: 'Next.jsとMongoDBを使用したタスク管理アプリの学習です。',
+    card: 'summary_large_image',
+  },
 };
 
 export default function RootLayout({
