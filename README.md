@@ -45,16 +45,49 @@
 5. [開発メモ](#開発メモ)
 
 
-<!-- プロジェクトの概要を記載 -->
-
 ## プロジェクトについて
-
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
+<!-- プロジェクトの概要を記載 -->
+### プロジェクトの概要
+
+<p>
+このアプリは、Next.jsの基本構文や使用方法、そしてMongoDBを使用したCRUD操作の基礎を学ぶ目的でUdemy講座を参考に制作しました。<br />
+以前に作成した<a href="https://github.com/Nanae-j/react_householdbudget_app">家計簿アプリ</a>で習得したTypeScriptの型定義などの基本構文を活用し、MongooseなどのODMを使用したデータベースとのやり取りについて学びました。<br />
+また、今回はスタイリングにTailwind CSSを導入し、効率的なユーティリティファーストのCSSフレームワークについても実践的に学習することができました。
+</p>
+
+<a href="https://www.udemy.com/course/nextjs-fullstack/?couponCode=KEEPLEARNING">udemy - Next.jsフルスタックWebアプリケーション開発入門</a>
 
 
-<!-- プロジェクトの環境を記載 -->
+### つまずいたところ
+
+#### Nextのフォント設定とtailwind CSS(v4)のフォント設定が干渉する
+
+<p>
+  Nextのリファレンスにあるgoogleフォントの読み込みをおこうなうとtailwind v4の@theme効かない事象が発生<br />
+  <a href="https://nextjs.org/docs/pages/building-your-application/optimizing/fonts">Nextのフォント設定</a>しないで、<a href="https://tailwindcss.com/docs/font-family#customizing-your-theme">Tailwindのフォント設定</a>をすることで解決しました
+</p>
+
+<p>
+  検証画面のsourceからcssファイルを確認。Nextの方のgoogleフォント設定をすると、cssの@importが一番上にならなくてエラーになりフォント設定が反映されなかった
+</p>
+
+```
+// layout.cssに以下のエラー出る
+Define @import rules at the top of the stylesheet
+```
+
+### 制作後の振り返り
+
+<p>
+  Mongooseを使用したデータベース連携において、モデルの作成・構造の理解に時間を要しました。<br />
+  また、タスクの取得表示にはルートハンドラーを、タスクの作成にはサーバーアクションを使用するという新しい構造について理解は深まりましたが、学習難度を感じました。<br/>
+  前回制作した<a href="https://github.com/Nanae-j/react_householdbudget_app">家計簿アプリ</a>とは異なる技術でデータベース操作を行ったため、当初はすべてが新しく感じられましたが、CRUD操作の基本は同じであるという点を再認識でき、非常に有意義な学びとなりました。<br/>
+  データベースの基本操作について理解が定着してきたので、今後のアプリ開発では、どのようなシチュエーションでどのデータベース技術を活用すべきか自身で判断できるようになりたいと考えています。また、各データベースの特徴やそれぞれのメリットについても知識を深めていきたいと思います。
+</p>
+
 
 ## 環境
 
